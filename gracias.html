@@ -23,14 +23,33 @@
       <div class="fila"><dt>Precio</dt><dd class="num gratis">0,00</dd></div>
     </dl>
     <div class="acciones">
-      <a class="ejecutar" href="guia-ia-trading.pdf" download>Descargar la guía <small>PDF</small></a>
+      <a class="ejecutar" id="descarga" href="guia-ia-trading.pdf">Descargar la guía <small>PDF</small></a>
+      <a class="ejecutar sec" id="externo" href="guia-ia-trading.pdf" hidden>Abrir en Chrome</a>
+      <p class="letra" id="aviso" hidden></p>
       <a class="ejecutar sec" href="https://www.instagram.com/cronicas_y_mercado/">Seguir en Instagram</a>
-      <p class="letra">Cada semana probamos un indicador con datos reales y contamos el resultado, salga como salga.</p>
+      <p class="letra">También te enviamos el enlace a tu correo. Cada semana probamos un indicador con datos reales y contamos el resultado, salga como salga.</p>
     </div>
   </section>
 
   <footer class="pie">Contenido educativo; no es recomendación ni asesoría financiera. ¿Quieres que borremos tus datos? Escríbenos por mensaje directo a @cronicas_y_mercado.<br>
   <a href="privacidad.html">Política de tratamiento de datos</a> &nbsp; <a href="index.html">Volver</a></footer>
 </main>
+<script>
+// El navegador interno de Instagram y Facebook en Android no abre PDF: se ofrece abrirlo en Chrome.
+(function(){
+  var ua=navigator.userAgent, interno=/Instagram|FBAN|FBAV|FB_IAB/i.test(ua), android=/Android/i.test(ua);
+  if(!interno) return;
+  var url=new URL("guia-ia-trading.pdf",location.href).href, aviso=document.getElementById("aviso");
+  if(android){
+    var ext=document.getElementById("externo");
+    ext.href="intent://"+url.replace(/^https:\/\//,"")+"#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url="+encodeURIComponent(url)+";end";
+    ext.hidden=false;
+    aviso.textContent="Estás en el navegador de Instagram, que no abre PDF. Toca «Abrir en Chrome».";
+  }else{
+    aviso.textContent="Si la guía no se abre, toca ··· arriba a la derecha y elige «Abrir en el navegador».";
+  }
+  aviso.hidden=false;
+})();
+</script>
 </body>
 </html>

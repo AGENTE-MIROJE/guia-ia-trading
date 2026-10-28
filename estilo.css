@@ -112,3 +112,4 @@ h1 .l2{display:block;color:transparent;-webkit-text-stroke:1.5px var(--fg)}
 @media (prefers-reduced-motion:reduce){
   .cinta-pista,.vela,.nota-graf{animation:none!important;opacity:1}
 }
+[hidden]{display:none!important}

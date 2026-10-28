@@ -40,8 +40,9 @@
       <div class="fila"><dt>Formato</dt><dd class="num">PDF, 14 págs.</dd></div>
       <div class="fila"><dt>Precio</dt><dd class="num gratis">0,00</dd></div>
     </dl>
-    <form action="https://formsubmit.co/ca47b13731435722281ebe0ba1b06c58" method="POST">
+    <form id="boleta" action="https://formsubmit.co/ca47b13731435722281ebe0ba1b06c58" method="POST">
       <input type="hidden" name="_subject" value="Nuevo registro · Guía IA (Crónicas y Mercado)">
+      <input type="hidden" name="_autoresponse" value="¡Gracias por pedir la guía «IA en el trading, sin humo»! Descárgala aquí: https://agente-miroje.github.io/guia-ia-trading/guia-ia-trading.pdf — Si el enlace no abre dentro de Instagram, cópialo en Chrome o Safari. Contenido educativo; no es recomendación ni asesoría financiera. Crónicas y Mercado (@cronicas_y_mercado).">
       <input type="hidden" name="_next" value="https://agente-miroje.github.io/guia-ia-trading/gracias.html">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
@@ -51,13 +52,14 @@
       <div class="campo"><label for="nombre">Nombre</label>
         <input id="nombre" type="text" name="nombre" required maxlength="80" autocomplete="name"></div>
       <div class="campo"><label for="correo">Correo</label>
-        <input id="correo" type="email" name="correo" required maxlength="120" autocomplete="email" inputmode="email"></div>
+        <input id="correo" type="email" name="email" required maxlength="120" autocomplete="email" inputmode="email"></div>
 
       <div class="consent">
         <input id="autoriza" type="checkbox" name="autorizacion_datos" value="Sí autorizo (Ley 1581 de 2012)" required>
         <label for="autoriza">Autorizo el tratamiento de mis datos para recibir la guía y contenido educativo de Crónicas y Mercado, según la <a href="privacidad.html">política de datos</a>.</label>
       </div>
       <button class="ejecutar" type="submit">Recibir la guía <small>PDF</small></button>
+      <p class="letra" id="estado" role="status" aria-live="polite"></p>
       <p class="letra">Sin spam. Si quieres que borremos tus datos, escríbenos por mensaje directo.</p>
     </form>
   </aside>
@@ -81,6 +83,24 @@
 </main>
 
 <script>
+// Envío sin salir de la página: el navegador interno de Instagram no siempre sigue la redirección de FormSubmit.
+(function(){
+  var f=document.getElementById("boleta"), est=document.getElementById("estado"), btn=f.querySelector("button");
+  f.addEventListener("submit",function(ev){
+    if(!window.fetch||!window.FormData) return;
+    ev.preventDefault();
+    var h=f.elements["_honey"]; if(h&&h.value) return;
+    btn.disabled=true; est.textContent="Enviando…";
+    var datos={}; new FormData(f).forEach(function(v,k){datos[k]=v});
+    fetch("https://formsubmit.co/ajax/ca47b13731435722281ebe0ba1b06c58",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(datos)})
+      .then(function(r){return r.json()})
+      .then(function(j){
+        if(String(j.success)==="true"){location.href="gracias.html"}
+        else{throw new Error(j.message||"error")}
+      })
+      .catch(function(){est.textContent="No se pudo enviar. Revisa tu conexión e inténtalo otra vez.";btn.disabled=false});
+  });
+})();
 (function(){
   // US30, 23-04-2026, 13:30–19:50 UTC (8:30–14:50 Bogotá), velas de 10 min [apertura, máximo, mínimo, cierre]. Fuente: Dukascopy, CSV validado.
   var V=[[49269.65,49368.51,49218.01,49303.13],[49302.12,49358.47,49281.0,49337.46],[49338.02,49350.5,49280.49,49313.88],[49313.5,49373.51,49250.98,49365.98],[49364.48,49447.53,49362.01,49442.53],[49444.65,49492.62,49429.53,49439.91],[49441.38,49472.57,49397.26,49432.12],[49431.61,49489.69,49427.29,49480.56],[49479.1,49523.86,49473.75,49494.72],[49492.15,49511.04,49427.9,49439.03],[49441.51,49468.82,49412.26,49444.38],[49444.89,49478.15,49429.89,49465.46],[49464.94,49476.4,49451.05,49451.85],[49450.85,49451.06,49373.24,49421.0],[49421.97,49460.31,49386.31,49420.34],[49419.86,49423.78,49377.63,49397.33],[49397.86,49423.17,49387.29,49411.68],[49412.56,49419.3,49377.13,49397.71],[49398.19,49415.73,49373.26,49377.79],[49377.3,49412.66,49377.3,49403.08],[49402.1,49432.51,49391.4,49409.51],[49410.47,49421.41,49202.57,49207.07],[49204.92,49225.92,49096.04,49120.83],[49118.72,49170.53,49083.98,49101.67],[49103.62,49189.42,49048.97,49062.37],[49063.87,49064.38,48861.65,48924.84],[48920.98,49189.74,48891.0,49162.55],[49164.47,49237.32,49136.5,49189.51],[49190.4,49289.1,49185.88,49282.18],[49282.71,49308.82,49249.64,49303.38],[49302.52,49350.08,49301.87,49311.0],[49311.47,49316.84,49268.25,49283.75],[49284.11,49315.46,49221.77,49245.79],[49245.33,49315.81,49221.45,49299.36],[49299.89,49326.27,49283.14,49318.04],[49317.06,49329.99,49287.42,49302.01],[49302.46,49334.25,49243.44,49275.01],[49276.1,49312.75,49259.45,49289.41],[49290.9,49341.56,49235.35,49306.18]];
