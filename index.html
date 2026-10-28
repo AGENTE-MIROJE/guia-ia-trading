@@ -3,49 +3,158 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Guía IA en el trading, sin humo · Crónicas y Mercado</title>
-<meta name="description" content="Guía gratuita: cómo usar la inteligencia artificial en el trading para investigar, probar y medir, sin promesas. Por Crónicas y Mercado.">
+<title>IA en el trading, sin humo · Guía gratuita</title>
+<meta name="description" content="Guía gratuita de Crónicas y Mercado: qué hace la IA en el trading, qué no hace y cómo probar una idea con datos antes de arriesgar dinero.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0E11">
+<link rel="preload" href="fonts/Oswald.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<main class="wrap">
-  <div class="marca"><b>@cronicas_y_mercado</b> · Crónicas y Mercado</div>
-  <h1>IA en el trading, <em>sin humo</em></h1>
-  <p class="sub">La guía gratuita del episodio 1: cómo usar la inteligencia artificial para investigar, probar y medir, sin promesas.</p>
 
-  <ul class="lista">
-    <li>Qué hace la IA en el trading y qué <b>no</b> hace</li>
-    <li>Los 8 roles del equipo, con instrucciones listas para copiar en tu chat de IA</li>
-    <li>La plantilla de hipótesis para escribir <b>antes</b> de mirar los datos</li>
-    <li>La lista de chequeo del verificador</li>
-    <li>Ruta para empezar: gratis y avanzada</li>
-    <li>Un ejemplo real de principio a fin: el RSI 30/70 en el Dow Jones</li>
-  </ul>
+<div class="cinta" aria-hidden="true"><div class="cinta-pista">
+  <span>La hipótesis se escribe antes de mirar los datos</span><span>Costos incluidos en cada prueba</span><span>El 30 % final de los datos se guarda para confirmar</span><span>Cada cifra con su fuente</span><span>Si el verificador dice no, no se publica</span><span>La IA no ejecuta órdenes</span>
+  <span>La hipótesis se escribe antes de mirar los datos</span><span>Costos incluidos en cada prueba</span><span>El 30 % final de los datos se guarda para confirmar</span><span>Cada cifra con su fuente</span><span>Si el verificador dice no, no se publica</span><span>La IA no ejecuta órdenes</span>
+</div></div>
 
-  <form class="card" action="https://formsubmit.co/miroje2000@gmail.com" method="POST">
-    <input type="hidden" name="_subject" value="Nuevo registro · Guía IA (Crónicas y Mercado)">
-    <input type="hidden" name="_next" value="https://agente-miroje.github.io/guia-ia-trading/gracias.html">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="origen" value="Instagram · comentario IA">
-    <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<main class="pagina">
+  <header class="cab">
+    <div class="cuenta"><b>@cronicas_y_mercado</b><span>Serie IA en el trading, episodio 1</span></div>
+    <h1>IA en el trading,<span class="l2">sin humo</span></h1>
+    <p class="bajada">Qué hace la inteligencia artificial en el trading, qué no hace y cómo probar una idea con datos antes de arriesgar un peso. <strong>Gratis, en un PDF de 14 páginas.</strong></p>
+  </header>
 
-    <label for="nombre">Tu nombre</label>
-    <input id="nombre" type="text" name="nombre" required maxlength="80" autocomplete="name">
-    <label for="correo">Tu correo</label>
-    <input id="correo" type="email" name="correo" required maxlength="120" autocomplete="email">
-
-    <div class="consent">
-      <input id="autoriza" type="checkbox" name="autorizacion_datos" value="Sí autorizo (Ley 1581 de 2012)" required>
-      <label for="autoriza" style="margin:0">Autorizo el tratamiento de mis datos para recibir la guía y contenido educativo de Crónicas y Mercado, según la <a href="privacidad.html">política de tratamiento de datos</a>. Puedo pedir que los borren cuando quiera.</label>
+  <figure class="graf" id="graf">
+    <div class="graf-cab">
+      <span><b>US30</b> velas de 10 min, sesión de Nueva York</span>
+      <span class="lectura" id="lectura" aria-live="polite"></span>
     </div>
-    <button type="submit">Quiero la guía</button>
-    <p class="nota">Gratis. Sin spam. Te puedes dar de baja con un mensaje.</p>
-  </form>
+    <svg id="velas" role="img" aria-label="Gráfico de velas del US30 del 23 de abril de 2026: sube en la mañana, cae más de 600 puntos hacia el mediodía y se recupera al cierre."></svg>
+    <figcaption>Velas reales del US30, 23 de abril de 2026, hora de Bogotá. Datos: Dukascopy (precio medio). Ilustración, no es una señal.</figcaption>
+  </figure>
 
-  <p class="pie">Contenido educativo; no es recomendación ni asesoría financiera. El trading implica riesgo de pérdida. Ninguna herramienta, incluida la IA, garantiza resultados.<br>
-  <a href="privacidad.html">Política de tratamiento de datos</a> · <a href="https://www.instagram.com/cronicas_y_mercado/">Instagram</a></p>
+  <aside class="boleta" aria-labelledby="t-boleta">
+    <div class="boleta-cab"><h2 id="t-boleta">Boleta de orden</h2><span>Entrega inmediata</span></div>
+    <dl class="filas">
+      <div class="fila"><dt>Activo</dt><dd>Guía «IA en el trading, sin humo»</dd></div>
+      <div class="fila"><dt>Formato</dt><dd class="num">PDF, 14 págs.</dd></div>
+      <div class="fila"><dt>Precio</dt><dd class="num gratis">0,00</dd></div>
+    </dl>
+    <form action="https://formsubmit.co/miroje2000@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo registro · Guía IA (Crónicas y Mercado)">
+      <input type="hidden" name="_next" value="https://agente-miroje.github.io/guia-ia-trading/gracias.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="origen" value="Instagram, comentario IA">
+      <div class="honey" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+
+      <div class="campo"><label for="nombre">Nombre</label>
+        <input id="nombre" type="text" name="nombre" required maxlength="80" autocomplete="name"></div>
+      <div class="campo"><label for="correo">Correo</label>
+        <input id="correo" type="email" name="correo" required maxlength="120" autocomplete="email" inputmode="email"></div>
+
+      <div class="consent">
+        <input id="autoriza" type="checkbox" name="autorizacion_datos" value="Sí autorizo (Ley 1581 de 2012)" required>
+        <label for="autoriza">Autorizo el tratamiento de mis datos para recibir la guía y contenido educativo de Crónicas y Mercado, según la <a href="privacidad.html">política de datos</a>.</label>
+      </div>
+      <button class="ejecutar" type="submit">Recibir la guía <small>PDF</small></button>
+      <p class="letra">Sin spam. Si quieres que borremos tus datos, escríbenos por mensaje directo.</p>
+    </form>
+  </aside>
+
+  <section class="indice" aria-labelledby="t-indice">
+    <h2 id="t-indice">Lo que trae la guía</h2>
+    <p>Siete secciones, en el orden en que se usan.</p>
+    <ol>
+      <li><span class="n">1</span><span class="t">Qué hace la IA en el trading y qué no<em>Y los tres errores que debes vigilar</em></span><span class="p">pág. 1</span></li>
+      <li><span class="n">2</span><span class="t">Los 8 roles del equipo<em>Instrucciones listas para copiar en tu chat de IA</em></span><span class="p">pág. 2</span></li>
+      <li><span class="n">3</span><span class="t">La plantilla de hipótesis<em>Para llenarla antes de ver un solo resultado</em></span><span class="p">pág. 5</span></li>
+      <li><span class="n">4</span><span class="t">La lista de chequeo del verificador<em>Cifras, método y aviso de riesgo</em></span><span class="p">pág. 6</span></li>
+      <li><span class="n">5</span><span class="t">Ruta para empezar<em>La gratuita, para hoy, y la avanzada que usamos nosotros</em></span><span class="p">pág. 7</span></li>
+      <li><span class="n">6</span><span class="t">Un ejemplo real de principio a fin<em>El RSI 30/70 en el Dow Jones</em></span><span class="p">pág. 11</span></li>
+      <li><span class="n">7</span><span class="t">Aviso legal y de riesgos</span><span class="p">pág. 13</span></li>
+    </ol>
+  </section>
+
+  <footer class="pie">Contenido educativo; no es recomendación ni asesoría financiera. El trading implica riesgo de pérdida y ninguna herramienta, incluida la IA, garantiza resultados. Resultados pasados no garantizan resultados futuros.<br>
+  <a href="privacidad.html">Política de tratamiento de datos</a> &nbsp; <a href="https://www.instagram.com/cronicas_y_mercado/">Instagram</a></footer>
 </main>
+
+<script>
+(function(){
+  // US30, 23-04-2026, 13:30–19:50 UTC (8:30–14:50 Bogotá), velas de 10 min [apertura, máximo, mínimo, cierre]. Fuente: Dukascopy, CSV validado.
+  var V=[[49269.65,49368.51,49218.01,49303.13],[49302.12,49358.47,49281.0,49337.46],[49338.02,49350.5,49280.49,49313.88],[49313.5,49373.51,49250.98,49365.98],[49364.48,49447.53,49362.01,49442.53],[49444.65,49492.62,49429.53,49439.91],[49441.38,49472.57,49397.26,49432.12],[49431.61,49489.69,49427.29,49480.56],[49479.1,49523.86,49473.75,49494.72],[49492.15,49511.04,49427.9,49439.03],[49441.51,49468.82,49412.26,49444.38],[49444.89,49478.15,49429.89,49465.46],[49464.94,49476.4,49451.05,49451.85],[49450.85,49451.06,49373.24,49421.0],[49421.97,49460.31,49386.31,49420.34],[49419.86,49423.78,49377.63,49397.33],[49397.86,49423.17,49387.29,49411.68],[49412.56,49419.3,49377.13,49397.71],[49398.19,49415.73,49373.26,49377.79],[49377.3,49412.66,49377.3,49403.08],[49402.1,49432.51,49391.4,49409.51],[49410.47,49421.41,49202.57,49207.07],[49204.92,49225.92,49096.04,49120.83],[49118.72,49170.53,49083.98,49101.67],[49103.62,49189.42,49048.97,49062.37],[49063.87,49064.38,48861.65,48924.84],[48920.98,49189.74,48891.0,49162.55],[49164.47,49237.32,49136.5,49189.51],[49190.4,49289.1,49185.88,49282.18],[49282.71,49308.82,49249.64,49303.38],[49302.52,49350.08,49301.87,49311.0],[49311.47,49316.84,49268.25,49283.75],[49284.11,49315.46,49221.77,49245.79],[49245.33,49315.81,49221.45,49299.36],[49299.89,49326.27,49283.14,49318.04],[49317.06,49329.99,49287.42,49302.01],[49302.46,49334.25,49243.44,49275.01],[49276.1,49312.75,49259.45,49289.41],[49290.9,49341.56,49235.35,49306.18]];
+  var NS="http://www.w3.org/2000/svg", svg=document.getElementById("velas"), lec=document.getElementById("lectura");
+  var quieto=matchMedia("(prefers-reduced-motion: reduce)").matches, animado=false;
+  var num=function(x){return x.toLocaleString("es-CO",{minimumFractionDigits:2,maximumFractionDigits:2})};
+  var hora=function(i){var m=8*60+30+i*10;return Math.floor(m/60)+":"+String(m%60).padStart(2,"0")};
+  var css=getComputedStyle(document.documentElement), col=function(n){return css.getPropertyValue(n).trim()};
+  function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+  function txt(s,a,p){var e=el("text",a,p);e.textContent=s;return e}
+  var lo=Math.min.apply(0,V.map(function(v){return v[2]})), hi=Math.max.apply(0,V.map(function(v){return v[1]}));
+  var iMin=V.findIndex(function(v){return v[2]===lo});
+  var W,H,ejeD=64,arr=14,abj=26,X,Y,paso;
+
+  function leer(i){
+    var v=V[i], s=v[3]>=v[0]?"sube":"baja";
+    lec.innerHTML="<i>"+hora(i)+"</i> <i>Ap</i> "+num(v[0])+" <i>Máx</i> "+num(v[1])+" <i>Mín</i> "+num(v[2])+" <i>Cie</i> <span class='"+s+"'>"+num(v[3])+"</span>";
+  }
+
+  function dibujar(){
+    W=svg.parentNode.clientWidth; H=Math.round(Math.max(250,Math.min(420,W*.52)));
+    svg.setAttribute("viewBox","0 0 "+W+" "+H); svg.setAttribute("height",H); svg.innerHTML="";
+    var ancho=W-ejeD, alto=H-arr-abj, pad=(hi-lo)*.08, a=lo-pad, b=hi+pad;
+    paso=ancho/V.length;
+    X=function(i){return i*paso+paso/2}; Y=function(p){return arr+(b-p)/(b-a)*alto};
+    var g=el("g",{});
+    for(var p=Math.ceil(a/100)*100;p<=b;p+=100){
+      var y=Y(p); el("line",{x1:0,x2:ancho,y1:y,y2:y,stroke:col("--grid")},g);
+      txt(num(p).replace(/,00$/,""),{x:ancho+8,y:y+4,fill:col("--dim"),"font-family":"DM Mono","font-size":11},g);
+    }
+    [0,9,18,27,36].forEach(function(i){
+      el("line",{x1:X(i),x2:X(i),y1:arr,y2:H-abj,stroke:col("--grid")},g);
+      txt(hora(i),{x:i?X(i):2,y:H-8,fill:col("--dim"),"font-family":"DM Mono","font-size":11,"text-anchor":i?"middle":"start"},g);
+    });
+    var cuerpo=Math.max(2,paso*.62), lento=quieto||animado;
+    V.forEach(function(v,i){
+      var c=v[3]>=v[0]?col("--up"):col("--down"), gg=el("g",{class:lento?"":"vela"});
+      if(!lento) gg.style.animationDelay=(.25+i*.035)+"s";
+      el("line",{x1:X(i),x2:X(i),y1:Y(v[1]),y2:Y(v[2]),stroke:c,"stroke-width":1.2},gg);
+      var y1=Y(Math.max(v[0],v[3])), y2=Y(Math.min(v[0],v[3]));
+      el("rect",{x:X(i)-cuerpo/2,y:y1,width:cuerpo,height:Math.max(1.2,y2-y1),fill:c,rx:1},gg);
+    });
+    // Último cierre
+    var ult=V[V.length-1][3], yu=Y(ult), nota=el("g",{class:lento?"":"nota-graf"});
+    if(!lento) nota.style.animationDelay=(.4+V.length*.035)+"s";
+    el("line",{x1:0,x2:ancho,y1:yu,y2:yu,stroke:col("--ac"),"stroke-dasharray":"3 4","stroke-width":1},nota);
+    el("rect",{x:ancho+2,y:yu-10,width:ejeD-2,height:20,fill:col("--ac"),rx:2},nota);
+    txt(num(ult).replace(/,\d\d$/,""),{x:ancho+8,y:yu+4,fill:"#14100A","font-family":"DM Mono","font-size":11,"font-weight":500},nota);
+    // El mínimo de la sesión, con la pregunta que abre la guía
+    var xm=X(iMin), ym=Y(lo);
+    el("circle",{cx:xm,cy:ym,r:4,fill:"none",stroke:col("--ac"),"stroke-width":1.5},nota);
+    var t1=txt("Mínimo "+num(lo)+" a las "+hora(iMin),{y:ym-36,fill:col("--fg"),"font-family":"DM Mono","font-size":W<520?11:12.5},nota);
+    var t2=txt("¿Señal o ruido? Primero la hipótesis.",{y:ym-20,fill:col("--ac"),"font-family":"Barlow","font-size":W<520?13:15,"font-weight":600},nota);
+    var w=Math.max(t1.getComputedTextLength(),t2.getComputedTextLength());
+    var tx=Math.max(6,Math.min(ancho-w-6,xm-w-10));
+    t1.setAttribute("x",tx); t2.setAttribute("x",tx);
+    var fondo=document.createElementNS(NS,"rect");
+    [["x",tx-5],["y",ym-50],["width",w+10],["height",36],["rx",3],["fill",col("--panel")],["opacity",.88]].forEach(function(a){fondo.setAttribute(a[0],a[1])});
+    nota.insertBefore(fondo,t1);
+    el("line",{x1:xm-3,y1:ym-3,x2:Math.min(xm-8,tx+w),y2:ym-15,stroke:col("--ac")},nota);
+    // Cruz que sigue al dedo o al ratón
+    var cruz=el("line",{x1:0,x2:0,y1:arr,y2:H-abj,stroke:col("--muted"),"stroke-dasharray":"2 3",opacity:0});
+    function mover(ev){
+      var r=svg.getBoundingClientRect(), x=(ev.clientX-r.left)*(W/r.width);
+      var i=Math.max(0,Math.min(V.length-1,Math.floor(x/paso)));
+      cruz.setAttribute("x1",X(i));cruz.setAttribute("x2",X(i));cruz.setAttribute("opacity",.7);leer(i);
+    }
+    svg.onpointermove=mover; svg.onpointerdown=mover;
+    svg.onpointerleave=function(){cruz.setAttribute("opacity",0);leer(V.length-1)};
+    leer(V.length-1);
+  }
+  (document.fonts?document.fonts.ready:Promise.resolve()).then(function(){dibujar();animado=true});
+  var t; addEventListener("resize",function(){clearTimeout(t);t=setTimeout(dibujar,120)});
+})();
+</script>
 </body>
 </html>
