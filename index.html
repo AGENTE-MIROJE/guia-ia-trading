@@ -92,6 +92,8 @@
     var h=f.elements["_honey"]; if(h&&h.value) return;
     btn.disabled=true; est.textContent="Enviando…";
     var datos={}; new FormData(f).forEach(function(v,k){datos[k]=v});
+    // Copia a la hoja «Inscritos · Guía IA» del Drive (Apps Script); no bloquea la entrega.
+    try{navigator.sendBeacon("https://script.google.com/macros/s/AKfycby8uubSr17qpyCesuRpDuma8w41pZgYw2edoAJYYNaZ8rPQMefBiuWIsnhFxOGoULUk5w/exec",new URLSearchParams({nombre:datos.nombre,email:datos.email,autorizacion_datos:datos.autorizacion_datos||"",origen:datos.origen||"",_honey:datos._honey||""}))}catch(e){}
     fetch("https://formsubmit.co/ajax/ca47b13731435722281ebe0ba1b06c58",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(datos)})
       .then(function(r){return r.json()})
       .then(function(j){
