@@ -28,3 +28,4 @@ button,.boton{display:block;width:100%;text-align:center;margin-top:18px;padding
 .texto p,.texto li{margin:10px 0;color:var(--fg)}
 .texto ul{padding-left:22px}
 .ok{color:var(--ok);font-family:ui-monospace,Menlo,monospace;font-size:14px}
+.card>.boton:first-child{margin-top:0}
